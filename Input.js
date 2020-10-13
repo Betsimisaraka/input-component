@@ -1,9 +1,24 @@
 import React from 'react';
 
 function Input(props) {
-    const placeholder = props.placeholder; 
+    const placeholder = props.placeholder;
+    let classes = props.error ? `input input__${props.error}` : 'input';
+    let labelClass = props.label && props.error ? "input__label_error" : "";
+    
+    if (props.fullWidth) {
+        classes = `${classes} input__fullwidth`;
+    }
+    if (props.size) {
+        classes = `${classes} input__${props.size}`;
+    }
+    if (props.multiple) {
+        classes = `${classes} input__${props.multiple}`;
+    }
     return (
-        <input type="text" placeholder={placeholder} />
+        <div className="container">
+            <label className={labelClass}> {props.label}</label>
+            <input type="text" value={props.value} className={classes} placeholder={placeholder} disabled={props.disabled} />
+        </div>
     )
 }
 

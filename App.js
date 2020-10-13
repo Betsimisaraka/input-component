@@ -9,69 +9,61 @@ function App() {
             <form>
                 <div className="input_section">
                     {`<Input />`}
-                    <label>Label</label>
-                    <Input placeholder="First Name"/>
+                    <Input placeholder="First Name" label="Label"/>
                 </div>
                 <div className="input_section">
                     {`<Input error/>`}
-                    <label>Label</label>
-                    <Input placeholder="Last Name" />
+                    <Input placeholder="Last Name" error="error" label="Label" />
                 </div>
                 <div className="input_section">
-                    {`<Input desabled/>`}
-                    <label>Label</label>
-                    <Input placeholder="Placeholder"/>
+                    {`<Input disabled/>`}
+                    <Input placeholder="Placeholder" label="Disabled input" disabled/>
                 </div>
                 <div className="input_container">
                     <div className="input_section">
                         {`<Input helperText="Some interesting text"/>`}
                         <label>Label</label>
                         <Input placeholder="Some text"/>
+                        <p>Some interesting text</p>
                     </div>
-                    <div className="input_section">
-                        {`<Input helperText="Some interesting text" error/>`}
+                    <div className="input_section text_interesting">
+                        <p>{`<Input helperText="Some interesting text" error/>`}</p>
                         <label>Label</label>
                         <Input placeholder="Some text"/>
+                        <p>Some interesting text</p>
                     </div>
                 </div>
                 <div className="input_container">
                     <div className="input_section"> 
                         {`<Input startIcon/>`}
-                        <label>Label</label>
-                        <Input placeholder="Call"/>
+                        <Input placeholder="Call" label="Start icon"/>
                     </div>
                     <div className="input_section"> 
                         {`<Input endIcon/>`}
-                        <label>Label</label>
-                        <Input placeholder="Unlock"/>
+                        <Input placeholder="Unlock" label="End icon"/>
                     </div>
                 </div>
                 <div className="input_section">
                     {`<Input value="text" />`}
-                    <label>Label</label>
-                    <Input />
+                    <Input value="text" label="Value text"/>
                 </div>
                 <div className="input_container">
                     <div className="input_section">
                         {`<Input size="sm" />`}
-                        <label>Label</label>
-                        <Input placeholder="Small size"/>
+                        <Input placeholder="Small size" size="sm" label="Small size"/>
                     </div>
                     <div className="input_section">
                         {`<Input size="md" />`}
-                        <label>Label</label>
-                        <Input placeholder="Medium size"/>
+                        <Input placeholder="Medium size" size="md" label="Medium size"/>
                     </div>
                 </div>
                 <div className="input_section">
                     {`<Input fullWidth />`}
-                    <label>Label</label>
-                    <Input placeholder="Full width"/>
+                    <Input value="text" fullWidth="fullwidth" label="Fullwidth input"/>
                 </div>
                 <div className="input_section">
                     {`<Input multiple row="4" />`}
-                    <label>Label</label>
-                    <Input placeholder="Multiple inputs"/>
+                    <Input placeholder="Multiple inputs" multiple="row-4" label="Multiple inputs"/>
                 </div>
             </form>
         </article>

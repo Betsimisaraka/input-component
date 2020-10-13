@@ -14,11 +14,78 @@ body {
     justify-content: space-between;
 }
 
-input {border: 1px solid #828282;
+.input {
+    border: 1px solid #828282;
     width: 200px;
     height: 56px;
     box-sizing: border-box;
     border-radius: 8px;
+}
+
+.input:hover {
+    border: 1px solid #333333;
+}
+
+.input:focus {
+    border: 1px solid #2962FF;
+    outline: none;
+    border-radius: 8px;
+}
+
+label:focus {
+    color: #2962FF;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input__error,
+.input__error:focus {
+    border: 1px solid #D32F2F;
+    outline: none;
+}
+
+.input__label_error,
+.input__label_error:focus {
+    color: red;
+}
+
+.input__error:hover {
+    border: 1px solid #333333;
+}
+.input__error:hover,
+.input__label_error:hover {
+    color: #333333;
+}
+
+.input:disabled {
+    background: #F2F2F2;
+    border: 1px solid #E0E0E0;
+}
+
+.text_interesting p:last-child, 
+.text_interesting label {
+    color: red;
+}
+
+.text_interesting input {
+    border: 1px solid #D32F2F; 
+}
+
+.input__sm {
+    width: 200px;
+    height: 40px;
+}
+
+.input__fullwidth {
+    width: 100%;
+}
+
+.input__row-4 {
+    width: 200px;
+    height: 150px;
 }
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */

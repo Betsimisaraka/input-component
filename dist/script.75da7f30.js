@@ -28372,10 +28372,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function Input(props) {
   var placeholder = props.placeholder;
-  return /*#__PURE__*/_react.default.createElement("input", {
+  var classes = props.error ? "input input__".concat(props.error) : 'input';
+  var labelClass = props.label && props.error ? "input__label_error" : "";
+
+  if (props.fullWidth) {
+    classes = "".concat(classes, " input__fullwidth");
+  }
+
+  if (props.size) {
+    classes = "".concat(classes, " input__").concat(props.size);
+  }
+
+  if (props.multiple) {
+    classes = "".concat(classes, " input__").concat(props.multiple);
+  }
+
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    className: labelClass
+  }, " ", props.label), /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
-    placeholder: placeholder
-  });
+    value: props.value,
+    className: classes,
+    placeholder: placeholder,
+    disabled: props.disabled
+  }));
 }
 
 var _default = Input;
@@ -28399,56 +28421,74 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function App() {
   return /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("h1", null, "Inputs"), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("div", {
     className: "input_section"
-  }, "<Input />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "First Name"
+  }, "<Input />", /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "First Name",
+    label: "Label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_section"
-  }, "<Input error/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Last Name"
+  }, "<Input error/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Last Name",
+    error: "error",
+    label: "Label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_section"
-  }, "<Input desabled/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Placeholder"
+  }, "<Input disabled/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Placeholder",
+    label: "Disabled input",
+    disabled: true
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_container"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "input_section"
   }, "<Input helperText=\"Some interesting text\"/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
     placeholder: "Some text"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "input_section"
-  }, "<Input helperText=\"Some interesting text\" error/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
+  }), /*#__PURE__*/_react.default.createElement("p", null, "Some interesting text")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_section text_interesting"
+  }, /*#__PURE__*/_react.default.createElement("p", null, "<Input helperText=\"Some interesting text\" error/>"), /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
     placeholder: "Some text"
-  }))), /*#__PURE__*/_react.default.createElement("div", {
+  }), /*#__PURE__*/_react.default.createElement("p", null, "Some interesting text"))), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_container"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "input_section"
-  }, "<Input startIcon/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Call"
+  }, "<Input startIcon/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Call",
+    label: "Start icon"
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_section"
-  }, "<Input endIcon/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Unlock"
+  }, "<Input endIcon/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Unlock",
+    label: "End icon"
   }))), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_section"
-  }, "<Input value=\"text\" />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, null)), /*#__PURE__*/_react.default.createElement("div", {
+  }, "<Input value=\"text\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
+    value: "text",
+    label: "Value text"
+  })), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_container"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "input_section"
-  }, "<Input size=\"sm\" />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Small size"
+  }, "<Input size=\"sm\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Small size",
+    size: "sm",
+    label: "Small size"
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_section"
-  }, "<Input size=\"md\" />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Medium size"
+  }, "<Input size=\"md\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Medium size",
+    size: "md",
+    label: "Medium size"
   }))), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_section"
-  }, "<Input fullWidth />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Full width"
+  }, "<Input fullWidth />", /*#__PURE__*/_react.default.createElement(_Input.default, {
+    value: "text",
+    fullWidth: "fullwidth",
+    label: "Fullwidth input"
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_section"
-  }, "<Input multiple row=\"4\" />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Multiple inputs"
+  }, "<Input multiple row=\"4\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Multiple inputs",
+    multiple: "row-4",
+    label: "Multiple inputs"
   }))));
 }
 
@@ -28494,7 +28534,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58857" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61444" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
