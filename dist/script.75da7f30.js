@@ -28352,11 +28352,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
+},{"./bundle-url":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/style.css/style.css":[function(require,module,exports) {
 
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
 },{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"Input.js":[function(require,module,exports) {
 "use strict";
 
@@ -28369,10 +28370,11 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Input() {
+function Input(props) {
+  var placeholder = props.placeholder;
   return /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
-    placeholder: "First Name"
+    placeholder: placeholder
   });
 }
 
@@ -28388,19 +28390,71 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-require("./style.css");
+require("style.css");
 
 var _Input = _interopRequireDefault(require("./Input"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("h1", null, "Inputs"), /*#__PURE__*/_react.default.createElement(_Input.default, null));
+  return /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("h1", null, "Inputs"), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_section"
+  }, "<Input />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "First Name"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_section"
+  }, "<Input error/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Last Name"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_section"
+  }, "<Input desabled/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Placeholder"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_container"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_section"
+  }, "<Input helperText=\"Some interesting text\"/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Some text"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_section"
+  }, "<Input helperText=\"Some interesting text\" error/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Some text"
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_container"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_section"
+  }, "<Input startIcon/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Call"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_section"
+  }, "<Input endIcon/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Unlock"
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_section"
+  }, "<Input value=\"text\" />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, null)), /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_container"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_section"
+  }, "<Input size=\"sm\" />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Small size"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_section"
+  }, "<Input size=\"md\" />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Medium size"
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_section"
+  }, "<Input fullWidth />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Full width"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_section"
+  }, "<Input multiple row=\"4\" />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    placeholder: "Multiple inputs"
+  }))));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./style.css":"style.css","./Input":"Input.js"}],"script.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","style.css":"node_modules/style.css/style.css","./Input":"Input.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -28440,7 +28494,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58657" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58857" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

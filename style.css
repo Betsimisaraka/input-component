@@ -1,0 +1,22 @@
+body {
+    padding-left: 80px;
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input {border: 1px solid #828282;
+    width: 200px;
+    height: 56px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
