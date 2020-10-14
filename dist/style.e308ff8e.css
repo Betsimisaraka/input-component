@@ -1,5 +1,18 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
 body {
     padding-left: 80px;
+    background-color: bisque;
+    padding-block-start: 1rem;
+}
+
+article h1 {
+    color: deeppink;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 .input_section {
@@ -13,10 +26,19 @@ body {
    grid-template-columns: repeat(2, 400px);
 }
 
+.container,
+.input_section {
+    border: none;
+}
+
 .input {
+    height: 56px;
+}
+
+.input,
+textarea {
     border: 1px solid #828282;
     width: 200px;
-    height: 56px;
     box-sizing: border-box;
     border-radius: 8px;
 }
@@ -83,28 +105,19 @@ label:focus {
     width: 100%;
 }
 
-.input__row-4 {
-    width: 200px;
-    height: 150px;
-}
-
-.container p {
-    padding: 0;
-    margin: 0;
+.container i {
     position: absolute;
-    top: 50%;
+    top: 45%;
+    right: 0;
+    bottom: 0;
 }
 
-.container p:nth-of-type(1) {
+.container i:nth-of-type(1) {
     left: 5%;
-    right: 0;
-    bottom: 0;
 }
 
-.container p:last-child {
-    left: 40%;    
-    right: 0;
-    bottom: 0;
+.container i:nth-of-type(2) {
+    left: 45%;    
 }
 
 .input__call::placeholder {
@@ -115,8 +128,9 @@ label:focus {
     padding-left: 1rem;
 }
 
-.input__multiline {
-    height: 150px;
+textarea::placeholder {
+    padding-top: 1rem;
+    padding-left: 1rem;
 }
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */

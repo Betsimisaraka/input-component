@@ -5,7 +5,7 @@ function Input(props) {
     const placeholder = props.placeholder;
     let classes = props.error ? `input input__${props.error}` : 'input';
     let labelClass = props.label && props.error ? "input__label_error" : "";
-    
+
     if (props.fullWidth) {
         classes = `${classes} input__fullwidth`;
     }
@@ -22,20 +22,16 @@ function Input(props) {
         classes = `${classes} input__${props.endIcon}`;
     }
 
-    if (props.multiline === true) {
-        classes = `${classes} input__multiline`;
-    }
     return (
-        <div className="container">
-            <label className={labelClass}> {props.label}</label>
-            <p><Icon name={props.startIcon} /></p>
-            <input type="text" 
-                value={props.value} 
-                className={classes} 
-                placeholder={placeholder}
-                disabled={props.disabled} />
-            <p><Icon name={props.endIcon}/></p>
-        </div>
+            <fieldset className="container">
+                <label className={labelClass}> {props.label}</label>
+                <i><Icon name={props.startIcon} /></i>
+                <i><Icon name={props.endIcon} /></i>
+                <input type="text"
+                    className={classes}
+                    placeholder={placeholder}
+                    disabled={props.disabled} />
+            </fieldset>
     )
 }
 

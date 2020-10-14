@@ -28486,25 +28486,20 @@ function Input(props) {
     classes = "".concat(classes, " input__").concat(props.endIcon);
   }
 
-  if (props.multiline === true) {
-    classes = "".concat(classes, " input__multiline");
-  }
-
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("fieldset", {
     className: "container"
   }, /*#__PURE__*/_react.default.createElement("label", {
     className: labelClass
-  }, " ", props.label), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_Icon.default, {
+  }, " ", props.label), /*#__PURE__*/_react.default.createElement("i", null, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     name: props.startIcon
+  })), /*#__PURE__*/_react.default.createElement("i", null, /*#__PURE__*/_react.default.createElement(_Icon.default, {
+    name: props.endIcon
   })), /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
-    value: props.value,
     className: classes,
     placeholder: placeholder,
     disabled: props.disabled
-  }), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_Icon.default, {
-    name: props.endIcon
-  })));
+  }));
 }
 
 var _default = Input;
@@ -28521,25 +28516,23 @@ var _react = _interopRequireDefault(require("react"));
 
 require("style.css");
 
-var _Icon = _interopRequireDefault(require("./Icon"));
-
 var _Input = _interopRequireDefault(require("./Input"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("h1", null, "Inputs"), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("h1", null, "Inputs Component"), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("fieldset", {
     className: "input_section"
   }, "<Input />", /*#__PURE__*/_react.default.createElement(_Input.default, {
     placeholder: "First Name",
     label: "Label"
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  })), /*#__PURE__*/_react.default.createElement("fieldset", {
     className: "input_section"
   }, "<Input error/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
     placeholder: "Last Name",
     error: "error",
     label: "Label"
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  })), /*#__PURE__*/_react.default.createElement("fieldset", {
     className: "input_section"
   }, "<Input disabled/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
     placeholder: "Placeholder",
@@ -28547,67 +28540,66 @@ function App() {
     disabled: true
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_container"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("fieldset", {
     className: "input_section"
   }, "<Input helperText=\"Some interesting text\"/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
     placeholder: "Some text"
-  }), /*#__PURE__*/_react.default.createElement("p", null, "Some interesting text")), /*#__PURE__*/_react.default.createElement("div", {
+  }), /*#__PURE__*/_react.default.createElement("p", null, "Some interesting text")), /*#__PURE__*/_react.default.createElement("fieldset", {
     className: "input_section text_interesting"
   }, /*#__PURE__*/_react.default.createElement("p", null, "<Input helperText=\"Some interesting text\" error/>"), /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
     placeholder: "Some text"
   }), /*#__PURE__*/_react.default.createElement("p", null, "Some interesting text"))), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_container"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("fieldset", {
     className: "input_section"
   }, "<Input startIcon/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
     placeholder: "Call",
     label: "Start icon",
     startIcon: "call"
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  })), /*#__PURE__*/_react.default.createElement("fieldset", {
     className: "input_section"
   }, "<Input endIcon/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
     placeholder: "Unlock",
     label: "End icon",
     endIcon: "lock"
-  }))), /*#__PURE__*/_react.default.createElement("div", {
+  }))), /*#__PURE__*/_react.default.createElement("fieldset", {
     className: "input_section"
   }, "<Input value=\"text\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
-    value: "text",
+    placeholder: "text",
     label: "Value text"
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_container"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("fieldset", {
     className: "input_section"
   }, "<Input size=\"sm\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
     placeholder: "Small size",
     size: "sm",
     label: "Small size"
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  })), /*#__PURE__*/_react.default.createElement("fieldset", {
     className: "input_section"
   }, "<Input size=\"md\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
     placeholder: "Medium size",
     size: "md",
     label: "Medium size"
-  }))), /*#__PURE__*/_react.default.createElement("div", {
+  }))), /*#__PURE__*/_react.default.createElement("fieldset", {
     className: "input_section"
   }, "<Input fullWidth />", /*#__PURE__*/_react.default.createElement(_Input.default, {
-    value: "text",
+    placeholder: "text",
     fullWidth: "fullwidth",
     label: "Fullwidth input"
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  })), /*#__PURE__*/_react.default.createElement("fieldset", {
     className: "input_section"
-  }, "<Input multiple row=\"4\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Multiple inputs",
-    multiline: true,
-    rows: "4",
-    cols: "40",
-    label: "Multiple inputs"
+  }, "<Input multiple row=\"4\" />", /*#__PURE__*/_react.default.createElement("label", null, "Multilines of text"), /*#__PURE__*/_react.default.createElement("textarea", {
+    placeholder: "Multilines of text",
+    name: "textarea",
+    id: "multiline",
+    rows: "5"
   }))));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","style.css":"node_modules/style.css/style.css","./Icon":"Icon.js","./Input":"Input.js"}],"script.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","style.css":"node_modules/style.css/style.css","./Input":"Input.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -28647,7 +28639,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51676" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54373" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
