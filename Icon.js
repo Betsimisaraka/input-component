@@ -10,19 +10,19 @@ const Icon = props => {
 	let icon;
 	const style = props.align === 'right' ? 'icon--right' : null;
 	switch (props.name) {
-		case 'add-cart':
+		case 'call':
 			icon = <img src={IconCall} className={style} />;
 			break;
-		case 'anchor':
+		case 'edit':
 			icon = <img src={IconEdit} className={style} />;
 			break;
-		case 'check':
+		case 'lock':
 			icon = <img src={IconLock} className={style} />;
 			break;
-		case 'download':
+		case 'search':
 			icon = <img src={IconSearch} className={style} />;
 			break;
-		case 'search':
+		case 'send':
 			icon = <img src={IconSend} className={style} />;
 			break;
 		default:

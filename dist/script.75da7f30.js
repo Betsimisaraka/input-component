@@ -28402,35 +28402,35 @@ var Icon = function Icon(props) {
   var style = props.align === 'right' ? 'icon--right' : null;
 
   switch (props.name) {
-    case 'add-cart':
+    case 'call':
       icon = /*#__PURE__*/_react.default.createElement("img", {
         src: _call.default,
         className: style
       });
       break;
 
-    case 'anchor':
+    case 'edit':
       icon = /*#__PURE__*/_react.default.createElement("img", {
         src: _edit.default,
         className: style
       });
       break;
 
-    case 'check':
+    case 'lock':
       icon = /*#__PURE__*/_react.default.createElement("img", {
         src: _lock.default,
         className: style
       });
       break;
 
-    case 'download':
+    case 'search':
       icon = /*#__PURE__*/_react.default.createElement("img", {
         src: _search.default,
         className: style
       });
       break;
 
-    case 'search':
+    case 'send':
       icon = /*#__PURE__*/_react.default.createElement("img", {
         src: _send.default,
         className: style
@@ -28478,17 +28478,29 @@ function Input(props) {
     classes = "".concat(classes, " input__").concat(props.multiple);
   }
 
+  if (props.startIcon && props.placeholder) {
+    classes = "".concat(classes, " input__").concat(props.startIcon);
+  }
+
+  if (props.endIcon && props.placeholder) {
+    classes = "".concat(classes, " input__").concat(props.endIcon);
+  }
+
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "container"
   }, /*#__PURE__*/_react.default.createElement("label", {
     className: labelClass
-  }, " ", props.label), /*#__PURE__*/_react.default.createElement("input", {
+  }, " ", props.label), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_Icon.default, {
+    name: props.startIcon
+  })), /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
     value: props.value,
     className: classes,
     placeholder: placeholder,
     disabled: props.disabled
-  }));
+  }), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_Icon.default, {
+    name: props.endIcon
+  })));
 }
 
 var _default = Input;
@@ -28545,12 +28557,14 @@ function App() {
     className: "input_section"
   }, "<Input startIcon/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
     placeholder: "Call",
-    label: "Start icon"
+    label: "Start icon",
+    startIcon: "call"
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_section"
   }, "<Input endIcon/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
     placeholder: "Unlock",
-    label: "End icon"
+    label: "End icon",
+    endIcon: "lock"
   }))), /*#__PURE__*/_react.default.createElement("div", {
     className: "input_section"
   }, "<Input value=\"text\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
@@ -28627,7 +28641,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51785" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52272" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

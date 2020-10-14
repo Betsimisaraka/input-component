@@ -37,12 +37,12 @@ function App() {
                 <div className="input_container">
                     <div className="input_section"> 
                         {`<Input startIcon/>`}
-                        <Input placeholder="Call" label="Start icon"
+                        <Input placeholder="Call" label="Start icon" startIcon="call"
                         />
                     </div>
                     <div className="input_section"> 
                         {`<Input endIcon/>`}
-                        <Input placeholder="Unlock" label="End icon"/>
+                        <Input placeholder="Unlock" label="End icon" endIcon="lock"/>
                     </div>
                 </div>
                 <div className="input_section">

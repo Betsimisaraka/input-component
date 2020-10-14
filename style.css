@@ -39,6 +39,7 @@ label:focus {
 .container {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .input__error,
@@ -86,4 +87,31 @@ label:focus {
 .input__row-4 {
     width: 200px;
     height: 150px;
+}
+
+.container p {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+}
+
+.container p:nth-of-type(1) {
+    left: 5%;
+    right: 0;
+    bottom: 0;
+}
+
+.container p:last-child {
+    left: 80%;    
+    right: 0;
+    bottom: 0;
+}
+
+.input__call::placeholder {
+    padding-left: 3rem;
+}
+
+.input__lock::placeholder {
+    padding-left: 1rem;
 }

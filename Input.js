@@ -15,16 +15,22 @@ function Input(props) {
     if (props.multiple) {
         classes = `${classes} input__${props.multiple}`;
     }
+    if (props.startIcon && props.placeholder) {
+        classes = `${classes} input__${props.startIcon}`;
+    }
+    if (props.endIcon && props.placeholder) {
+        classes = `${classes} input__${props.endIcon}`;
+    }
     return (
         <div className="container">
             <label className={labelClass}> {props.label}</label>
-            {/* <p>{props.startIcon} ? <Icon name={props.startIcon}/> : ''</p> */}
+            <p><Icon name={props.startIcon} /></p>
             <input type="text" 
                 value={props.value} 
                 className={classes} 
                 placeholder={placeholder}
                 disabled={props.disabled} />
-            {/* <p>{props.endIcon} ? <Icon name={props.endIcon}/> : ""</p> */}
+            <p><Icon name={props.endIcon}/></p>
         </div>
     )
 }
