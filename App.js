@@ -1,6 +1,7 @@
 import React from 'react'
 import 'style.css';
-import Input from './Input'
+import Icon from './Icon';
+import Input from './Input';
 
 function App() {
     return (
@@ -36,7 +37,8 @@ function App() {
                 <div className="input_container">
                     <div className="input_section"> 
                         {`<Input startIcon/>`}
-                        <Input placeholder="Call" label="Start icon"/>
+                        <Input placeholder="Call" label="Start icon"
+                        />
                     </div>
                     <div className="input_section"> 
                         {`<Input endIcon/>`}

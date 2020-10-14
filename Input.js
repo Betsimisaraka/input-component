@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from './Icon';
 
 function Input(props) {
     const placeholder = props.placeholder;
@@ -17,7 +18,13 @@ function Input(props) {
     return (
         <div className="container">
             <label className={labelClass}> {props.label}</label>
-            <input type="text" value={props.value} className={classes} placeholder={placeholder} disabled={props.disabled} />
+            {/* <p>{props.startIcon} ? <Icon name={props.startIcon}/> : ''</p> */}
+            <input type="text" 
+                value={props.value} 
+                className={classes} 
+                placeholder={placeholder}
+                disabled={props.disabled} />
+            {/* <p>{props.endIcon} ? <Icon name={props.endIcon}/> : ""</p> */}
         </div>
     )
 }

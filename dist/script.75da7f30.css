@@ -509,5 +509,12 @@ template {
   display: none;
 }
 
+img svg {
+    margin: 0 0.5rem 0 0;
+}
+
+.icon--right {
+    margin: 0.5rem 0 0 0;
+}
 
 /*# sourceMappingURL=/script.75da7f30.css.map */

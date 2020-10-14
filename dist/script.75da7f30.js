@@ -28358,7 +28358,22 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"Input.js":[function(require,module,exports) {
+},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/call.svg":[function(require,module,exports) {
+module.exports = "/call.88be7624.svg";
+},{}],"assets/edit.svg":[function(require,module,exports) {
+module.exports = "/edit.4c7be04f.svg";
+},{}],"assets/lock.svg":[function(require,module,exports) {
+module.exports = "/lock.979c328c.svg";
+},{}],"assets/search.svg":[function(require,module,exports) {
+module.exports = "/search.f1252315.svg";
+},{}],"assets/send.svg":[function(require,module,exports) {
+module.exports = "/send.0c1e3112.svg";
+},{}],"Icon.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"Icon.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28367,6 +28382,82 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+var _call = _interopRequireDefault(require("./assets/call.svg"));
+
+var _edit = _interopRequireDefault(require("./assets/edit.svg"));
+
+var _lock = _interopRequireDefault(require("./assets/lock.svg"));
+
+var _search = _interopRequireDefault(require("./assets/search.svg"));
+
+var _send = _interopRequireDefault(require("./assets/send.svg"));
+
+require("./Icon.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Icon = function Icon(props) {
+  var icon;
+  var style = props.align === 'right' ? 'icon--right' : null;
+
+  switch (props.name) {
+    case 'add-cart':
+      icon = /*#__PURE__*/_react.default.createElement("img", {
+        src: _call.default,
+        className: style
+      });
+      break;
+
+    case 'anchor':
+      icon = /*#__PURE__*/_react.default.createElement("img", {
+        src: _edit.default,
+        className: style
+      });
+      break;
+
+    case 'check':
+      icon = /*#__PURE__*/_react.default.createElement("img", {
+        src: _lock.default,
+        className: style
+      });
+      break;
+
+    case 'download':
+      icon = /*#__PURE__*/_react.default.createElement("img", {
+        src: _search.default,
+        className: style
+      });
+      break;
+
+    case 'search':
+      icon = /*#__PURE__*/_react.default.createElement("img", {
+        src: _send.default,
+        className: style
+      });
+      break;
+
+    default:
+      icon = /*#__PURE__*/_react.default.createElement("span", null);
+      break;
+  }
+
+  return icon;
+};
+
+var _default = Icon;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./assets/call.svg":"assets/call.svg","./assets/edit.svg":"assets/edit.svg","./assets/lock.svg":"assets/lock.svg","./assets/search.svg":"assets/search.svg","./assets/send.svg":"assets/send.svg","./Icon.css":"Icon.css"}],"Input.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Icon = _interopRequireDefault(require("./Icon"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28402,7 +28493,7 @@ function Input(props) {
 
 var _default = Input;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Icon":"Icon.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28413,6 +28504,8 @@ exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 
 require("style.css");
+
+var _Icon = _interopRequireDefault(require("./Icon"));
 
 var _Input = _interopRequireDefault(require("./Input"));
 
@@ -28494,7 +28587,7 @@ function App() {
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","style.css":"node_modules/style.css/style.css","./Input":"Input.js"}],"script.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","style.css":"node_modules/style.css/style.css","./Icon":"Icon.js","./Input":"Input.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -28534,7 +28627,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61444" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51785" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
