@@ -4,7 +4,7 @@
 
 Use Front-end libraries like React. Don’t look at the existing solution. Fulfill user stories below:
 
-![screenshot](./screenshot.png)
+![screenshot](./assets/screenshot.png)
 
 -   User story: I can see error state
 -   User story: I can choose to disable input
