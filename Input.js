@@ -21,6 +21,10 @@ function Input(props) {
     if (props.endIcon && props.placeholder) {
         classes = `${classes} input__${props.endIcon}`;
     }
+
+    if (props.multiline === true) {
+        classes = `${classes} input__multiline`;
+    }
     return (
         <div className="container">
             <label className={labelClass}> {props.label}</label>

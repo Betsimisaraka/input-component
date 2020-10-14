@@ -115,3 +115,7 @@ label:focus {
 .input__lock::placeholder {
     padding-left: 1rem;
 }
+
+.input__multiline {
+    height: 100px;
+}

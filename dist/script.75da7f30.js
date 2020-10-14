@@ -28486,6 +28486,10 @@ function Input(props) {
     classes = "".concat(classes, " input__").concat(props.endIcon);
   }
 
+  if (props.multiline === true) {
+    classes = "".concat(classes, " input__multiline");
+  }
+
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "container"
   }, /*#__PURE__*/_react.default.createElement("label", {
@@ -28594,7 +28598,9 @@ function App() {
     className: "input_section"
   }, "<Input multiple row=\"4\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
     placeholder: "Multiple inputs",
-    multiple: "row-4",
+    multiline: true,
+    rows: "4",
+    cols: "40",
     label: "Multiple inputs"
   }))));
 }
@@ -28641,7 +28647,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52272" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63786" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

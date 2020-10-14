@@ -5,3 +5,7 @@ img svg {
 .icon--right {
     margin: 0.5rem 0 0 0;
 }
+
+img svg path {
+    fill: #828282;
+}

@@ -65,7 +65,7 @@ function App() {
                 </div>
                 <div className="input_section">
                     {`<Input multiple row="4" />`}
-                    <Input placeholder="Multiple inputs" multiple="row-4" label="Multiple inputs"/>
+                    <Input placeholder="Multiple inputs" multiline rows="4" cols="40" label="Multiple inputs"/>
                 </div>
             </form>
         </article>

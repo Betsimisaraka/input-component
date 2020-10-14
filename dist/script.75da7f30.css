@@ -517,4 +517,8 @@ img svg {
     margin: 0.5rem 0 0 0;
 }
 
+img svg path {
+    fill: #828282;
+}
+
 /*# sourceMappingURL=/script.75da7f30.css.map */
