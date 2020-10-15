@@ -28490,11 +28490,7 @@ function Input(props) {
     className: "container"
   }, /*#__PURE__*/_react.default.createElement("label", {
     className: labelClass
-  }, " ", props.label), /*#__PURE__*/_react.default.createElement("i", null, /*#__PURE__*/_react.default.createElement(_Icon.default, {
-    name: props.startIcon
-  })), /*#__PURE__*/_react.default.createElement("i", null, /*#__PURE__*/_react.default.createElement(_Icon.default, {
-    name: props.endIcon
-  })), /*#__PURE__*/_react.default.createElement("input", {
+  }, " ", props.label), /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
     className: classes,
     placeholder: placeholder,
@@ -28639,7 +28635,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54373" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60622" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
