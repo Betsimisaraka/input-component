@@ -1,14 +1,14 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">Input component</h1>
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://github.com/Betsimisaraka/input-component">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://thirsty-austin-a2771a.netlify.app/">
       Solution
     </a>
   </h3>
@@ -29,13 +29,18 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](./assets/input-component.png)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
 -   Where can I see your demo?
 -   What was your experience?
+
+My experience is knowing how to use input component in react. That's already big experience for me because learnig new things is really important.
+
 -   What have you learned/improved?
+
+I have learned a lot in this project. Including, creating input component with react.
 -   Your wisdom? :)
 
 ### Built With
@@ -56,13 +61,16 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/Betsimisaraka/input-component
 
 # Install dependencies
-$ npm install
+$ npm install 'react react-dom'
+
+# install parcel
+$ npm install -g parcel-bundler
 
 # Run the app
-$ npm start
+$ parcel index.html
 ```
 
 ## Acknowledgements
@@ -75,5 +83,5 @@ $ npm start
 ## Contact
 
 -   Website [your-website.com](https://{your-web-site-link})
--   GitHub [@your-username](https://{github.com/your-usermame})
+-   GitHub [@your-username](https://github.com/Betsimisaraka)
 -   Twitter [@your-twitter](https://{twitter.com/your-username})

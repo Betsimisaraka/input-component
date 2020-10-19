@@ -1,10 +1,12 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body {
-    padding-left: 80px;
     background-color: bisque;
     padding-block-start: 1rem;
 }
@@ -85,6 +87,7 @@ label:focus {
 .input:disabled {
     background: #F2F2F2;
     border: 1px solid #E0E0E0;
+    cursor: not-allowed;
 }
 
 .text_interesting p:last-child, 
@@ -104,23 +107,6 @@ label:focus {
 .input__fullwidth {
     width: 100%;
 }
-
-/* .container i {
-    position: absolute;
-    top: 45%;
-    right: 0;
-    bottom: 0;
-}
-
-
-
-.container i:nth-of-type(1) {
-    left: 5%;
-}
-
-.container i:nth-of-type(2) {
-    left: 45%;    
-} */
 
 .input__call::placeholder {
     padding-left: 3rem;

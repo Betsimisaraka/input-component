@@ -28358,22 +28358,7 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/call.svg":[function(require,module,exports) {
-module.exports = "/call.88be7624.svg";
-},{}],"assets/edit.svg":[function(require,module,exports) {
-module.exports = "/edit.4c7be04f.svg";
-},{}],"assets/lock.svg":[function(require,module,exports) {
-module.exports = "/lock.979c328c.svg";
-},{}],"assets/search.svg":[function(require,module,exports) {
-module.exports = "/search.f1252315.svg";
-},{}],"assets/send.svg":[function(require,module,exports) {
-module.exports = "/send.0c1e3112.svg";
-},{}],"Icon.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"Icon.js":[function(require,module,exports) {
+},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"Input.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28382,82 +28367,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
-
-var _call = _interopRequireDefault(require("./assets/call.svg"));
-
-var _edit = _interopRequireDefault(require("./assets/edit.svg"));
-
-var _lock = _interopRequireDefault(require("./assets/lock.svg"));
-
-var _search = _interopRequireDefault(require("./assets/search.svg"));
-
-var _send = _interopRequireDefault(require("./assets/send.svg"));
-
-require("./Icon.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Icon = function Icon(props) {
-  var icon;
-  var style = props.align === 'right' ? 'icon--right' : null;
-
-  switch (props.name) {
-    case 'call':
-      icon = /*#__PURE__*/_react.default.createElement("img", {
-        src: _call.default,
-        className: style
-      });
-      break;
-
-    case 'edit':
-      icon = /*#__PURE__*/_react.default.createElement("img", {
-        src: _edit.default,
-        className: style
-      });
-      break;
-
-    case 'lock':
-      icon = /*#__PURE__*/_react.default.createElement("img", {
-        src: _lock.default,
-        className: style
-      });
-      break;
-
-    case 'search':
-      icon = /*#__PURE__*/_react.default.createElement("img", {
-        src: _search.default,
-        className: style
-      });
-      break;
-
-    case 'send':
-      icon = /*#__PURE__*/_react.default.createElement("img", {
-        src: _send.default,
-        className: style
-      });
-      break;
-
-    default:
-      icon = /*#__PURE__*/_react.default.createElement("span", null);
-      break;
-  }
-
-  return icon;
-};
-
-var _default = Icon;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./assets/call.svg":"assets/call.svg","./assets/edit.svg":"assets/edit.svg","./assets/lock.svg":"assets/lock.svg","./assets/search.svg":"assets/search.svg","./assets/send.svg":"assets/send.svg","./Icon.css":"Icon.css"}],"Input.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _Icon = _interopRequireDefault(require("./Icon"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28500,7 +28409,7 @@ function Input(props) {
 
 var _default = Input;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./Icon":"Icon.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28516,82 +28425,127 @@ var _Input = _interopRequireDefault(require("./Input"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function App() {
-  return /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("h1", null, "Inputs Component"), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "input_section"
-  }, "<Input />", /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "First Name",
-    label: "Label"
-  })), /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "input_section"
-  }, "<Input error/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Last Name",
-    error: "error",
-    label: "Label"
-  })), /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "input_section"
-  }, "<Input disabled/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Placeholder",
-    label: "Disabled input",
-    disabled: true
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "input_container"
-  }, /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "input_section"
-  }, "<Input helperText=\"Some interesting text\"/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Some text"
-  }), /*#__PURE__*/_react.default.createElement("p", null, "Some interesting text")), /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "input_section text_interesting"
-  }, /*#__PURE__*/_react.default.createElement("p", null, "<Input helperText=\"Some interesting text\" error/>"), /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Some text"
-  }), /*#__PURE__*/_react.default.createElement("p", null, "Some interesting text"))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "input_container"
-  }, /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "input_section"
-  }, "<Input startIcon/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Call",
-    label: "Start icon",
-    startIcon: "call"
-  })), /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "input_section"
-  }, "<Input endIcon/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Unlock",
-    label: "End icon",
-    endIcon: "lock"
-  }))), /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "input_section"
-  }, "<Input value=\"text\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "text",
-    label: "Value text"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "input_container"
-  }, /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "input_section"
-  }, "<Input size=\"sm\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Small size",
-    size: "sm",
-    label: "Small size"
-  })), /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "input_section"
-  }, "<Input size=\"md\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "Medium size",
-    size: "md",
-    label: "Medium size"
-  }))), /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "input_section"
-  }, "<Input fullWidth />", /*#__PURE__*/_react.default.createElement(_Input.default, {
-    placeholder: "text",
-    fullWidth: "fullwidth",
-    label: "Fullwidth input"
-  })), /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "input_section"
-  }, "<Input multiple row=\"4\" />", /*#__PURE__*/_react.default.createElement("label", null, "Multilines of text"), /*#__PURE__*/_react.default.createElement("textarea", {
-    placeholder: "Multilines of text",
-    name: "textarea",
-    id: "multiline",
-    rows: "5"
-  }))));
-}
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var App = /*#__PURE__*/function (_React$Component) {
+  _inherits(App, _React$Component);
+
+  var _super = _createSuper(App);
+
+  function App() {
+    var _this;
+
+    _classCallCheck(this, App);
+
+    _this = _super.call(this);
+    _this.state = {
+      value: "value from state"
+    };
+    return _this;
+  }
+
+  _createClass(App, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement("h1", null, "Inputs Component"), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("fieldset", {
+        className: "input_section"
+      }, "<Input />", /*#__PURE__*/_react.default.createElement(_Input.default, {
+        placeholder: "First Name",
+        label: "Label"
+      })), /*#__PURE__*/_react.default.createElement("fieldset", {
+        className: "input_section"
+      }, "<Input error/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
+        placeholder: "Last Name",
+        error: "error",
+        label: "Label"
+      })), /*#__PURE__*/_react.default.createElement("fieldset", {
+        className: "input_section"
+      }, "<Input disabled/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
+        placeholder: "Placeholder",
+        label: "Disabled input",
+        disabled: true
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "input_container"
+      }, /*#__PURE__*/_react.default.createElement("fieldset", {
+        className: "input_section"
+      }, "<Input helperText=\"Some interesting text\"/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
+        placeholder: "Some text"
+      }), /*#__PURE__*/_react.default.createElement("p", null, "Some interesting text")), /*#__PURE__*/_react.default.createElement("fieldset", {
+        className: "input_section text_interesting"
+      }, /*#__PURE__*/_react.default.createElement("p", null, "<Input helperText=\"Some interesting text\" error/>"), /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_Input.default, {
+        placeholder: "Some text"
+      }), /*#__PURE__*/_react.default.createElement("p", null, "Some interesting text"))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "input_container"
+      }, /*#__PURE__*/_react.default.createElement("fieldset", {
+        className: "input_section"
+      }, "<Input startIcon/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
+        placeholder: "Call",
+        label: "Start icon",
+        startIcon: "call"
+      })), /*#__PURE__*/_react.default.createElement("fieldset", {
+        className: "input_section"
+      }, "<Input endIcon/>", /*#__PURE__*/_react.default.createElement(_Input.default, {
+        placeholder: "Unlock",
+        label: "End icon",
+        endIcon: "lock"
+      }))), /*#__PURE__*/_react.default.createElement("fieldset", {
+        className: "input_section"
+      }, "<Input value=\"text\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
+        placeholder: "text",
+        label: "Value text"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "input_container"
+      }, /*#__PURE__*/_react.default.createElement("fieldset", {
+        className: "input_section"
+      }, "<Input size=\"sm\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
+        placeholder: "Small size",
+        size: "sm",
+        label: "Small size"
+      })), /*#__PURE__*/_react.default.createElement("fieldset", {
+        className: "input_section"
+      }, "<Input size=\"md\" />", /*#__PURE__*/_react.default.createElement(_Input.default, {
+        placeholder: "Medium size",
+        size: "md",
+        label: "Medium size"
+      }))), /*#__PURE__*/_react.default.createElement("fieldset", {
+        className: "input_section"
+      }, "<Input fullWidth />", /*#__PURE__*/_react.default.createElement(_Input.default, {
+        placeholder: "text",
+        fullWidth: "fullwidth",
+        label: "Fullwidth input"
+      })), /*#__PURE__*/_react.default.createElement("fieldset", {
+        className: "input_section"
+      }, "<Input multiple row=\"4\" />", /*#__PURE__*/_react.default.createElement("label", null, "Multilines of text"), /*#__PURE__*/_react.default.createElement("textarea", {
+        placeholder: "Multilines of text",
+        name: "textarea",
+        id: "multiline",
+        rows: "5"
+      }))));
+    }
+  }]);
+
+  return App;
+}(_react.default.Component);
 
 var _default = App;
 exports.default = _default;
@@ -28635,7 +28589,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60622" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50252" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

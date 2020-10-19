@@ -1,5 +1,4 @@
 import React from 'react';
-import Icon from './Icon';
 
 function Input(props) {
     const placeholder = props.placeholder;
@@ -25,8 +24,6 @@ function Input(props) {
     return (
             <fieldset className="container">
                 <label className={labelClass}> {props.label}</label>
-                {/* <i><Icon name={props.startIcon} /></i>
-                <i><Icon name={props.endIcon} /></i> */}
                 <input type="text"
                     className={classes}
                     placeholder={placeholder}
